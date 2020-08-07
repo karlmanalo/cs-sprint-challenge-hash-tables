@@ -23,11 +23,23 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+* Used to map data to a fixed data structure. They are commonly used to improve time complexity (lookup times in hash tables are O(1)).
 2. Collision resolution
+* When collisions occur (ie: they hash to the same value), a naive approach would be to simply overwrite the data that exists at that
+particular value in the hash table. Another approach would be building a linked list at each hash table key, where the key points to 
+the head of a linked list.
 3. Performance of basic hash table operations
 4. Load factor
+* <=0.2 or >=0.7? Resize! Halve or double, respectively.
 5. Automatic resizing
+* If adding or deleting from a hash table causes the load factor to fall outside of acceptable load factor range, we save the values of
+the old hash table, create a new appropriately sized hash table (double/halve to maintain 2**n elements for maximum efficiency), 
+re-hash the values from the old hash table, and place them in the new hash table according to their new hashes.
 6. Various use cases for hash tables
+* Avoids performing redundant calculations in some recursion problems.
+* Efficient way to maintain counts for individual elements
+* Cryptography (Encoding/decoding messages)
+* Security (verifying hashes)
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
